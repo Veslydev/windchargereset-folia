@@ -1,0 +1,24 @@
+name: WindChargeReset
+main: dev.vesly.windchargeresetfolia.WindChargeResetPlugin
+version: ${version}
+api-version: "1.21.11"
+folia-supported: true
+description: Native Folia Wind Charge momentum reset mechanic.
+commands:
+  windchargestop:
+    description: Reload WindCharge Reset
+    usage: /windchargestop reload
+    aliases: [wcs]
+  windchargereset:
+    description: Reload WindCharge Reset
+    usage: /windchargereset reload
+    aliases: [wcr]
+permissions:
+  windchargereset.use:
+    default: true
+  windchargereset.reload:
+    default: op
+  windchargestop.use:
+    default: true
+  windchargestop.reload:
+    default: op

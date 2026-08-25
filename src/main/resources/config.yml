@@ -1,0 +1,40 @@
+enabled: true
+
+activation:
+  require_airborne: true
+  require_falling: true
+  min_fall_velocity: -0.25
+  min_pitch_down: 55.0
+  # Player must be more than this many blocks above solid ground.
+  # Example: 10.0 means exactly 10 blocks is blocked, 11 blocks is allowed.
+  min_ground_distance: 10.0
+  cooldown_ms: 400
+
+effect:
+  consume_wind_charge: true
+  # Removes the real projectile so it cannot add vanilla knockback.
+  cancel_projectile: true
+  vertical_brake_multiplier: 0.25
+  min_upward_velocity: 0.12
+  max_upward_velocity: 0.45
+  horizontal_multiplier: 0.85
+
+sound:
+  enabled: true
+  type: ENTITY_WIND_CHARGE_WIND_BURST
+  volume: 1.0
+  # Vanilla Wind Charge pitch.
+  pitch: 0.67
+
+# Saves velocity from just before a reset and restores it after the next Ender Pearl lands.
+# This also restores fall distance, allowing mace hits to retain their pre-reset fall.
+momentum_carryover:
+  enabled: false
+  timeout_ms: 10000
+  horizontal: true
+  vertical: true
+  fall_distance: true
+
+messages:
+  reload: "&aWindCharge Reset config reloaded."
+  no_permission: "&cYou do not have permission."
